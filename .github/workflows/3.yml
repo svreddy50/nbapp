@@ -12,6 +12,7 @@ jobs:
       run: |
          echo "Hello World"      
   job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: stepx
