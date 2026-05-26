@@ -7,15 +7,20 @@ env:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      app_name: mbapp
+      os_name: Windows
     steps:
     - name: step-1
       run: |
         echo "App Name is $app_name"
-        echo "App Name is ${{ env.version }}"      
+        echo "App version is ${{ env.version }}"
+        echo "App Supported Os is ${{ env.os_name }}"        
   job2:
     runs-on: ubuntu-latest
     steps:
     - name: job2step1
       run: |
-         echo "App Name & version is ${{ env.app_name }} ${{ env.version }}"   
+         echo "App Name & version is ${{ env.app_name }} ${{ env.version }}"
+         echo "App Supported Os is ${{ env.os_name }}"          
   
