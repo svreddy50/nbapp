@@ -12,10 +12,18 @@ jobs:
       run: |
          echo "Hello World"      
   job2:
-    needs: job1
+    needs: 
+    - job1
+    - job2
     runs-on: ubuntu-latest
     steps:
     - name: stepx
       run: |
          echo "Today date is $(date)"
-         
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: job3-step
+      run: |
+         echo " Hello Job3 "
+     
