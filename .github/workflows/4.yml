@@ -1,0 +1,21 @@
+name: Wf-4
+on: workflow_dispatch
+env:
+  app_name: testapp
+  version: v1.1
+  owner: hsbc
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step-1
+      run: |
+        echo "App Name is $app_name"
+        echo "App Name is ${{ env.version }}"      
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: job2step1
+      run: |
+         echo "App Name & version is ${{ env.app_name }} ${{ env.version }}"   
+  
