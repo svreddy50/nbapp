@@ -1,0 +1,7 @@
+name: Wf-5 Secrets
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    run: |
+       echo "DB Passwd is ${{ secrets.DB_PASSWD }}"
