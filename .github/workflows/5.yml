@@ -1,5 +1,7 @@
 name: Wf-5 Secrets
-on: workflow_dispatch
+on:
+  push:
+  workflow_dispatch:
 jobs:
   job1:
     runs-on: ubuntu-latest
