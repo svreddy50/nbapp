@@ -7,4 +7,4 @@ jobs:
     - name: test
       run: |
         echo "DB Passwd is ${{ secrets.DB_PASSWD }}"
-        echo "${{ github.ref }}"
+        echo "${{ github.event }}"
